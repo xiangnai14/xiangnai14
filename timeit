@@ -1,0 +1,23 @@
+ import argparse
+ import timeit
+ 
+ if __name__ == "__main__":
+     parser = argparse.ArgumentParser()
+     parser.add_argument('input', type=str)
+     args = parser.parse_args()
+     start = timeit.default_timer() # Start timer
+ 
+     # Setup QA object
+     dbqa = setup_dbqa()
+     
+     # Parse input from argparse into QA object
+     response = dbqa({'query': args.input})
+     end = timeit.default_timer() # End timer
+ 
+     # Print document QA response
+     print(f'\nAnswer: {response["result"]}')
+     print('='*50) # Formatting separator
+ 
+     # Process source documents for better display
+     source_docs = response['source_documents']
+  
