@@ -1,0 +1,29 @@
+class Animals{
+    public String name;
+
+    public int age;
+
+    public Animals(String name,int age){
+        this.name=name;
+
+        this.age=age;
+
+ }
+
+    public void eat(){
+        System.out.println(this.name+"eating");
+
+    }
+
+}
+
+class Dogs extends Animals{
+    public Dogs(String name, int age){
+        super(name,age);
+
+    }
+
+    public void bark(){
+        System.out.println(this.name+"eating");
+
+    }
