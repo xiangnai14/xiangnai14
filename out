@@ -1,0 +1,4 @@
+   List<Integer> droppedList = numbers.stream()
+                .dropWhile(num -> num < 4)
+                .collect(Collectors.toList());
+        System.out.println("Dropped List: " + droppedList);
