@@ -1,0 +1,13 @@
+{
+if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0))
+{
+sum += arr2[i];
+}
+else
+{
+sum += arr1[i];
+}
+}
+sum += day;
+printf("%d", sum);
+}
