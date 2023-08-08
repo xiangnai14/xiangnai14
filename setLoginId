@@ -1,0 +1,21 @@
+public void setAttributes(Hashtable param1) { 
+        /**@todo:Implement this com.sun.content.server.service.security.User method*/ 
+        throw new java.lang.UnsupportedOperationException("Method setAttributes() not yet implemented."); 
+    } 
+ 
+ 
+    public String getLoginId() { 
+        return (String)fInfo.get("loginId"); 
+    } 
+    public void setLoginId(String param1) { 
+        if (param1 != null) 
+        fInfo.put("loginId", param1); 
+    } 
+ 
+    public String getFirstName() { 
+        return (String)fInfo.get("firstName"); 
+    } 
+    public void setFirstName(String param1) { 
+        if (param1 != null) 
+        fInfo.put("firstName", param1); 
+    } 
