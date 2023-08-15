@@ -1,0 +1,32 @@
+struct ListNode* removeElements(struct ListNode* head, int val)
+{
+    struct ListNode* cur=head;
+    struct ListNode* newhead=NULL,*tail=NULL;
+    while(cur)
+    {
+        if(cur->val==val)
+        {
+            struct ListNode* del=cur;
+            cur=cur->next;
+            free(del);
+        }
+        else 
+        {
+            if(tail==NULL)//考虑初始时头和尾都为NULL的情况
+            {
+                tail=newhead=cur;
+            }
+            else
+            {
+                tail->next=cur;
+                tail=tail->next;
+                
+            }
+            cur=cur->next;
+        }
+    }
+    if(tail)
+        tail->next=NULL;
+ 
+    return newhead;
+}
