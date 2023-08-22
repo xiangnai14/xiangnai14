@@ -1,0 +1,23 @@
+gifplay_button = new QPushButton(tr("see"));
+    gifplay_button->setParent(this);
+    gifplay_button->setFixedSize(200, 60);
+    gifplay_button->move(0, 50);
+    gifplay_button->setStyleSheet("QPushButton { background-color : white;"\
+        "color : black;"\
+        "border-radius : 2px;"\
+        "border : 2px solid black;"\
+        "font : 15px;}");
+    connect(gifplay_button,
+            &QPushButton::clicked,
+            this,
+            &Finddialog::playgif);
+ 
+void Finddialog::playgif()
+{
+    if (!gif_window == NULL)
+    {
+        gif_window->close();
+    }
+    gif_window = new GifWindow();
+    gif_window->show();
+}
